@@ -1,12 +1,11 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
-import hu.bme.mit.train.user.TrainUserImpl;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
-	private int referenceSpeed = 0;
+	private int referenceSpeed = 1;
 	private int speedLimit = 0;
 	private int timer = 0;
 
