@@ -1,4 +1,4 @@
-package hu.mit.bme.train.controller;
+package hu.bme.mit.train.controller;
 
 import org.junit.Before;
 import org.junit.Test;
