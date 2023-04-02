@@ -9,6 +9,8 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
 
+import java.time.LocalDate;
+
 public class TrainSystemTest {
 
 	TrainController controller;
@@ -48,6 +50,19 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void TachoTest() {
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		sensor.tachoGraphInsert();
+		//int joyPos = sensor.tachoGraphGet(LocalDate.now(), controller.getReferenceSpeed());
+		int refSpeed = sensor.tachoGraphGet(LocalDate.now(), user.getJoystickPosition());
+
+		//Assert.assertEquals(5, joyPos);
+		Assert.assertEquals(5, refSpeed);
+
 	}
 
 	
