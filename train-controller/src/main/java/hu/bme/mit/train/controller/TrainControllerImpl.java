@@ -24,6 +24,7 @@ public class TrainControllerImpl implements TrainController {
 		emergencyStop();
 		enforceSpeedLimit();
 	}
+	
 
 	@Override
 	public int getReferenceSpeed() {
