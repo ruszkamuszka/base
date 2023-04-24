@@ -7,8 +7,6 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 public class TrainSensorImpl implements TrainSensor {
 
@@ -32,6 +30,13 @@ public class TrainSensorImpl implements TrainSensor {
 	public void overrideSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
+		if(speedLimit < 0 || speedLimit > 500){
+			user.setAlarmState(true);
+		}else if(controller.getReferenceSpeed() * 0.5 > speedLimit){
+			user.setAlarmState(true);
+		}else{
+			user.setAlarmState(false);
+		}
 	}
 
 	@Override
