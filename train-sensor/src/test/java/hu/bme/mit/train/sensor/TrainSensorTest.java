@@ -35,9 +35,8 @@ public class TrainSensorTest {
 
     @Test
     public void SpeedLimitTest2(){
+        when(trainController.getReferenceSpeed()).thenReturn(15);
         trainSensor.overrideSpeedLimit(10);
-        trainUser.overrideJoystickPosition(5);
-        trainController.followSpeed();
         verify(trainUser, times(1)).setAlarmState(false);
     }
 
@@ -52,6 +51,13 @@ public class TrainSensorTest {
     public void SpeedLimitTest4(){
         trainSensor.overrideSpeedLimit(300);
         verify(trainUser, times(1)).setAlarmState(false);
+    }
+
+    @Test
+    public void SpeedLimitTest5(){
+        when(trainController.getReferenceSpeed()).thenReturn(15);
+        trainSensor.overrideSpeedLimit(1);
+        verify(trainUser, times(1)).setAlarmState(true);
     }
 
 

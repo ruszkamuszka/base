@@ -1,0 +1,3 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+hu.bme.mit.train.controller,hu.bme.mit.train.controller,TrainControllerImpl.new Thread() {...},26,0,0,0,8,0,2,0,2,0
+hu.bme.mit.train.controller,hu.bme.mit.train.controller,TrainControllerImpl,94,0,8,0,32,0,13,0,9,0

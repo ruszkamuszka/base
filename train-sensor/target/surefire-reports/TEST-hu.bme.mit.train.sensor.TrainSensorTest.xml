@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="hu.bme.mit.train.sensor.TrainSensorTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="hu.bme.mit.train.sensor.TrainSensorTest" time="1.181" errors="0" skipped="0">
   <properties>
-    <property name="idea.version" value="2022.2.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="idea.version" value="2022.2.1"/>
     <property name="java.vm.version" value="17.0.1+12-39"/>
     <property name="sun.boot.library.path" value="C:\Users\User\.jdks\openjdk-17.0.1\bin"/>
     <property name="maven.multiModuleProjectDirectory" value="C:\Users\User\Documents\GitHub\base"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value=""/>
-    <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.script" value=""/>
+    <property name="sun.os.patch.level" value=""/>
     <property name="user.dir" value="C:\Users\User\Documents\GitHub\base"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.runtime.version" value="17.0.1+12-39"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Educational Edition 2021.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Educational Edition 2021.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.1 test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.1 verify"/>
     <property name="java.home" value="C:\Users\User\.jdks\openjdk-17.0.1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -56,9 +56,14 @@
     <property name="file.separator" value="\"/>
     <property name="java.version.date" value="2021-10-19"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="ThisIsAnExampleTestStub" time="0.003"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="TachoTest" time="1.112"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="SpeedLimitTest1" time="0.049"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="SpeedLimitTest2" time="0.015"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="SpeedLimitTest3" time="0.002"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="SpeedLimitTest4" time="0.001"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="SpeedLimitTest5" time="0.002"/>
 </testsuite>
