@@ -2,12 +2,30 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+class FollowSpeedTask extends TimerTask 
+{ 
+   public static int i = 0; 
+   public void run() 
+   { 
+      followSpeed();
+   } 
+} 
+
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private int timer = 0;
+
+	Timer t;
+	TimerTask ts;
+
+	public TrainControllerImpl() {
+		t = new Timer();
+		ts = new FollowSpeedTask();
+		timer.schedule(ts, 0, 5000);
+	}
 
 	@Override
 	public void followSpeed() {
