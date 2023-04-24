@@ -15,9 +15,9 @@ public class TrainControllerImpl implements TrainController {
 				thread.run();
 				try{
 					followSpeed();
-					thread.sleep(5000);
+					thread.sleep(3000);
 				} catch (Exception e) {
-					throw new RuntimeException(e);
+					throw new IllegalThreadStateException();
 				}
 			}
 		};
